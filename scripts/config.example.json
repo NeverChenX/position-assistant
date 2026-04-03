@@ -1,0 +1,67 @@
+{
+  "_comment": "港股筛选工具配置文件 - 复制此文件为 config.json 并填写你的实际配置",
+  
+  "api_token": "YOUR_LIXINGZHE_API_TOKEN_HERE",
+  "base_url": "https://open.lixinger.com/api",
+  
+  "proxy": "",
+  "_proxy_comment": "可选：HTTP代理地址，如 http://127.0.0.1:7890",
+  
+  "telegram": {
+    "enabled": false,
+    "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_CHAT_ID"
+  },
+  
+  "output_dir": "./reports",
+  "cache_dir": "./cache",
+  
+  "filters": {
+    "min_market_cap": 50,
+    "max_pe": 15,
+    "min_pe": 0.01,
+    "max_pb": 1.5,
+    "min_pb": 0.01
+  },
+  
+  "exclude_codes": [],
+  "exclude_local_banks": true,
+  "local_banks": [
+    "天津银行", "晋商银行", "东莞农商银行", "泸州银行", "贵州银行", "重庆银行",
+    "重庆农村商业银行", "中原银行", "郑州银行", "威海银行", "广州农商银行",
+    "渤海银行", "哈尔滨银行", "甘肃银行", "江西银行", "九江银行"
+  ],
+  
+  "exchange_rates": {
+    "usd_to_cny": 7.2,
+    "hkd_to_cny": 0.92
+  },
+  
+  "portfolio": {
+    "hk_stocks": [
+      {"code": "00700", "name": "腾讯控股", "shares": 100, "price_hkd": 400}
+    ],
+    "a_stocks": [
+      {"code": "600000", "name": "浦发银行", "shares": 1000, "price_cny": 10}
+    ],
+    "cash_rmb": 100000,
+    "crypto_assets": {
+      "usdt": 10000,
+      "btc_usd": 50000,
+      "bnb_usd": 5000,
+      "other_usd": 0
+    }
+  },
+  
+  "report_colors": {
+    "bg": "#f4f6f8",
+    "panel": "#ffffff",
+    "line": "#d9dee6",
+    "text": "#2b313b",
+    "muted": "#6b7280",
+    "accent": "#4f6f8f",
+    "good": "#2f6f44",
+    "warn": "#9a6b1f",
+    "watch": "#7a3e3e"
+  }
+}
